@@ -2,7 +2,7 @@
 
 
 {% block content %}
-    <h1>Build a Blog!</h1>
+    <h1 style="text-align: center;">Add a Blog!</h1>
     <form method='post'>
         <label>Title of your post:
             <input type="text" name='blog_title' />
@@ -15,20 +15,5 @@
         </label>
         <input type="submit" value="Add Blog Post" />
     </form>
-
-    <hr />
-
-    {% if blog_list|length == 0 %}
-    <p>No blog entries yet</p>
-    {% else %}
-      
-        <ul>
-            {% for blog in blog_list %}
-            <li>{{blog}}</li>
-            {% endfor %}
-
-        </ul>             
     
-    {% endif %}
-
 {% endblock %}
